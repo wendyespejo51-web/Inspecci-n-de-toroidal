@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evento de interrupción - U07</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Inspección de toroidal</h1>
+    <form id="RegistroInspeccionToroidal">
+
+      <!-- Fecha automática -->
+      <div class="form-group">
+      <label for="fecha">Fecha de registro</label>
+      <input type="date" id="fecha" name="fecha" required>
+      </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let hoy = new Date();
+      let year = hoy.getFullYear();
+      let month = String(hoy.getMonth() + 1).padStart(2, '0');
+      let day = String(hoy.getDate()).padStart(2, '0');
+      let fechaActual = `${day}-${month}-${year}`;
+    document.getElementById("fecha").value = fechaActual;
+    });
+    </script>
+      
+      <!-- SED -->
+      <div class="form-group">
+        <label for="codigo">SED (Agregar solo número de SED, EJM: 1202, 21, 648)</label>
+        <input type="number" id="codigo" name="codigo" min="0" required>
+      </div>
+
+      <!-- Alim -->
+      <div class="form-group">
+        <label for="alim">Alimentador (Sin guión, EJM: A02, PA08; U07)</label>
+        <input type="text" id="alim" name="alim" required>
+      </div>
+
+      <!-- Celda -->
+      <div class="form-group">
+        <label for="Celda">Celda</label>
+        <select id="Celda" name="Celda" required>
+          <option value="" disabled selected hidden>Seleccione la celda</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="H">H</option>
+          <option value="I">I</option>
+          <option value="J">J</option>
+          <option value="K">K</option>
+          <option value="L">L</option>
+          <option value="M">M</option>
+        </select>
+      </div>
+
+      <!-- Responsable de registro -->
+      <div class="form-group">
+        <label for="Responsable">Responsable de registro</label>
+        <select id="Responsable" name="Responsable" required>
+          <option value="" disabled selected hidden>Seleccione su nombre y apellido</option>
+          <option value="Raúl Ames">Raúl Ames</option>
+          <option value="José Auccatoma">José Auccatoma</option>
+          <option value="Gilber Mendoza">Gilber Mendoza</option>
+          <option value="Carlos Muñoz">Carlos Muñoz</option>
+          <option value="Evelio Salvador">Evelio Salvador</option>
+          <option value="Noe Santos">Noe Santos</option>
+          <option value="Carlos Vizcarra">Carlos Vizcarra</option>
+        </select>
+      </div>
+
+          <!-- Compañero de trabajo -->
+      <div class="form-group">
+        <label for="Compañero">Compañero de trabajo</label>
+        <select id="Compañero" name="Compañero" required>
+          <option value="" disabled selected hidden>Seleccione su compañero de inspección</option>
+          <option value="Inspección individual">Inspección individual</option>
+          <option value="Raúl Ames">Raúl Ames</option>
+          <option value="José Auccatoma">José Auccatoma</option>
+          <option value="Gilber Mendoza">Gilber Mendoza</option>
+          <option value="Carlos Muñoz">Carlos Muñoz</option>
+          <option value="Evelio Salvador">Evelio Salvador</option>
+          <option value="Noe Santos">Noe Santos</option>
+          <option value="Carlos Vizcarra">Carlos Vizcarra</option>
+        </select>
+      </div>
+
+      <!-- Tiene toroidal -->
+      <div class="form-group">
+        <label for="Toroidal">¿Circuito tiene toroidal?</label>
+        <select id="Toroidal" name="Toroidal" required>
+          <option value="" disabled selected hidden>Seleccione una respuesta</option>
+          <option value="Si">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <!-- Tiene terminales de conexión -->
+      <div class="form-group">
+        <label for="Terminal">¿Circuito tiene terminales de conexión?</label>
+        <select id="Terminal" name="Terminal" required>
+          <option value="" disabled selected hidden>Seleccione una respuesta</option>
+          <option value="Si">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <!-- Cable adecuadamente peinado -->
+      <div class="form-group">
+        <label for="CablePeinado">¿El cable se encuentra adecuadamente peinado?</label>
+        <select id="CablePeinado" name="CablePeinado" required>
+          <option value="" disabled selected hidden>Seleccione una respuesta</option>
+          <option value="Si">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <!-- Tiene tuboflex -->
+      <div class="form-group">
+        <label for="Tuboflex">¿Circuito tiene tuboflex?</label>
+        <select id="Tuboflex" name="Tuboflex" required>
+          <option value="" disabled selected hidden>Seleccione una respuesta</option>
+          <option value="Si">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <!-- Criticidad -->
+      <div class="form-group">
+        <label for="Criticidad">Criticidad</label>
+        <select id="Criticidad" name="Criticidad" required>
+          <option value="" disabled selected hidden>Seleccione la criticidad</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="Instalación conforme">Instalación conforme</option>
+        </select>
+      </div>
+
+      <!-- Hallazgos -->
+      <div class="form-group">
+        <label for="Hallazgos">Hallazgos en la inspección</label>
+        <textarea id="Hallazgos" name="Hallazgos" rows="4"></textarea>
+      </div>
+
+      <!-- Observaciones -->
+      <div class="form-group">
+        <label for="Observacion">Observaciones adicionales en celda inspeccionada</label>
+        <textarea id="Observacion" name="Observacion" rows="4"></textarea>
+      </div>
+
+      <!-- Imágenes -->
+      <div class="form-group">
+        <label for="imagenes">Subir imágenes (máx. 5):</label>
+        <input type="file" id="imagenes" name="imagenes" accept="image/*" multiple>
+        <small>Puede subir hasta 5 imágenes</small>
+      </div>
+
+      <!-- Botón -->
+      <button type="button" id="enviarBtn">Enviar</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
