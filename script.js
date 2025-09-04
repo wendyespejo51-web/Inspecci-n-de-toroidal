@@ -6,7 +6,7 @@ document.getElementById("enviarBtn").addEventListener("click", async function(e)
 
   // Lista de IDs de los campos, asegurando que coincidan con el esquema
   const campos = [
-    "fecha", "codigo", "alim", "Celda", "Responsable", "Compañero", 
+    "fecha", "codigo", "alim", "Celda", "NodoFinal", "TipoFinal","Responsable", "Compañero", 
     "Toroidal", "Terminal", "CablePeinado", "Tuboflex", "Criticidad", 
     "Hallazgos", "Observacion"
   ];
@@ -15,7 +15,7 @@ document.getElementById("enviarBtn").addEventListener("click", async function(e)
   campos.forEach(campo => {
     const elemento = document.getElementById(campo);
     if (elemento) {
-      if (["codigo"].includes(campo)) {
+      if (["codigo","NodoFinal"].includes(campo)) {
         datos[campo] = parseInt(elemento.value);
       } else {
         datos[campo] = elemento.value;
