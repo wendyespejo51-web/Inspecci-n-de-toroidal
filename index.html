@@ -13,21 +13,9 @@
 
       <!-- Fecha automática -->
       <div class="form-group">
-      <label for="fecha">Fecha de registro</label>
+      <label for="fecha">Fecha de inspección</label>
       <input type="date" id="fecha" name="fecha" required>
       </div>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let hoy = new Date();
-      let year = hoy.getFullYear();
-      let month = String(hoy.getMonth() + 1).padStart(2, '0');
-      let day = String(hoy.getDate()).padStart(2, '0');
-  
-        // 👇 formato correcto para <input type="date">
-      let fechaActual = `${year}-${month}-${day}`;
-    document.getElementById("fecha").value = fechaActual;
-    });
       
       <!-- SED -->
       <div class="form-group">
