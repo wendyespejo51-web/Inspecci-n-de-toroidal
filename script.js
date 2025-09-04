@@ -1,6 +1,15 @@
 document.getElementById("enviarBtn").addEventListener("click", async function(e) {
   e.preventDefault();
 
+document.addEventListener("DOMContentLoaded", function () {
+  let hoy = new Date();
+  let year = hoy.getFullYear();
+  let month = String(hoy.getMonth() + 1).padStart(2, '0');
+  let day = String(hoy.getDate()).padStart(2, '0');
+  let fechaActual = `${day}-${month}-${year}`;
+  document.getElementById("fecha").value = fechaActual;
+});
+
   // Objeto para almacenar los datos
   const datos = {};
 
