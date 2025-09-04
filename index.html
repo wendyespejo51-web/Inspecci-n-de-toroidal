@@ -34,6 +34,28 @@
         <input type="number" id="codigo" name="codigo" min="0" required>
       </div>
 
+      <!-- Nodo final -->
+      <div class="form-group">
+        <label for="NodoFinal">Nodo final (Agregar nodo final del circuito, EJM: 65125, 20152, 5236)</label>
+        <input type="number" id="NodoFinal" name="NodoFinal" min="0" required>
+      </div>
+
+      <!-- Tipo de nodo final -->
+      <div class="form-group">
+        <label for="TipoFinal">Tipo de nodo final</label>
+        <select id="TipoFinal" name="TipoFinal" required>
+          <option value="" disabled selected hidden>Seleccione el tipo de nodo final</option>
+          <option value="Alimentador (Z)">Alimentador (Z)</option>
+          <option value="A">A</option>
+          <option value="C">C</option>
+          <option value="S">S</option>
+          <option value="T">T</option>
+          <option value="M">M</option>
+          <option value="U">U</option>
+          <option value="X">X</option>
+        </select>
+      </div>
+            
       <!-- Alim -->
       <div class="form-group">
         <label for="alim">Alimentador (Sin guión, EJM: A02, PA08; U07)</label>
