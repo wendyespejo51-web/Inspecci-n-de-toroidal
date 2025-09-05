@@ -16,21 +16,31 @@
       <label for="fecha">Fecha de inspección</label>
       <input type="date" id="fecha" name="fecha" required>
       </div>
-      
-      <!-- SED (Nodo inicial, EJM: 01202S, 00021S, etc.)-->
+
+      <!-- SED -->
       <div class="form-group">
-        <label for="codigo">SED (Nodo inicial)</label>
-        <input type="text" id="codigo" name="codigo" required>
-        <ul id="suggestions" class="suggestions-list"></ul>
+      <label for="codigo">SED (Nodo inicial, EJM: 01202S, 00021S, etc.)</label>
+      <input list="codigo" id="codigo" name="codigo" placeholder="Escribe o selecciona una SED" required>
+      <datalist id="Sed">
+      <option value="05223C">
+      <option value="64223X">
+      <option value="12232T">
+      <option value="65223X">
+      </datalist>
       </div>
 
       <!-- Nodo final -->
       <div class="form-group">
-        <label for="NodoFinal">Nodo final (EJM: 65337X, 06108C, G01, etc.)</label>
-        <input type="text" id="NodoFinal" name="NodoFinal" required>
-        <ul id="suggestions2" class="suggestions2-list"></ul>
+      <label for="NodoFinal">Nodo final (EJM: 65337X, 06108C, G01, etc.)</label>
+      <input list="NodoFinal" id="NodoFinal" name="NodoFinal" placeholder="Escribe o selecciona un nodo final" required>
+      <datalist id="Nodos">
+      <option value="05223C">
+      <option value="64223X">
+      <option value="12232T">
+      <option value="65223X">
+      </datalist>
       </div>
-      
+
       <!-- Alim -->
       <div class="form-group">
         <label for="alim">Alimentador (Sin guión, EJM: A02, PA08; U07)</label>
