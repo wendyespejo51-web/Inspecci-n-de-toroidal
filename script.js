@@ -1,3 +1,6 @@
+let nodos = document.getElementById("NodoFinal");
+let sed = document.getElementById("codigo");
+
 document.addEventListener("DOMContentLoaded", function () {
   // 📌 Generar la fecha actual
   let hoy = new Date();
