@@ -22,7 +22,7 @@ document.getElementById("enviarBtn").addEventListener("click", async function(e)
 
   // Lista de IDs de los campos, asegurando que coincidan con el esquema
   const campos = [
-    "fecha", "codigo", "alim", "Celda", "NodoFinal", "TipoFinal","Responsable", "Compañero", 
+    "fecha", "codigo", "alim", "Celda", "NodoFinal","Responsable", "Compañero", 
     "Toroidal", "Terminal", "CablePeinado", "Tuboflex", "Criticidad", 
     "Hallazgos", "Observacion"
   ];
