@@ -20,8 +20,8 @@
       <!-- SED -->
       <div class="form-group">
       <label for="codigo">SED (Nodo inicial, EJM: 01202S, 00021S, etc.)</label>
-      <input list="codigo" id="codigo" name="codigo" placeholder="Escribe o selecciona una SED" required>
-      <datalist id="codigo">
+      <input type="text" id="codigo" name="codigo" list="sedOpciones" placeholder="Escribe o selecciona una SED" required>
+      <datalist id="sedOpciones">
       <option value="00021S">
       <option value="00023S">
       <option value="00028S">
@@ -1065,8 +1065,8 @@
       <!-- Nodo final -->
       <div class="form-group">
       <label for="NodoFinal">Nodo final (EJM: 65337X, 06108C, G01, etc.)</label>
-      <input list="NodoFinal" id="NodoFinal" name="NodoFinal" placeholder="Escribe o selecciona un nodo final" required>
-      <datalist id="NodoFinal">
+      <input type="text" id="NodoFinal" name="NodoFinal" list="NodoFinalopciones" placeholder="Escribe o selecciona un nodo final" required>
+      <datalist id="NodoFinalopciones">
       <option value="01103S">
       <option value="00123T">
       <option value="00127S">
