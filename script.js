@@ -1,6 +1,3 @@
-let nodos = document.getElementById("NodoFinal");
-let sed = document.getElementById("codigo");
-
 document.addEventListener("DOMContentLoaded", function () {
   // 📌 Generar la fecha actual
   let hoy = new Date();
@@ -65,7 +62,7 @@ document.getElementById("enviarBtn").addEventListener("click", async function(e)
   console.log("Objeto JSON a enviar:", datos);
   
   try {
-    const response = await fetch("xxx", {
+    const response = await fetch("url HTTP de Power Automate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datos)
