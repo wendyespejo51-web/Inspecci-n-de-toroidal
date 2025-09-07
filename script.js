@@ -35,8 +35,8 @@ document.getElementById("enviarBtn").addEventListener("click", async function(e)
     const elemento = document.getElementById(campo);
     if (elemento) {
       if (["codigo","NodoFinal"].includes(campo)) {
-        datos[campo] = parseInt(elemento.value);
-        } else if (["fecha"].includes(campo)) {
+        datos[campo] = elemento.value.trim(); // siempre como string
+        }  else if (["fecha"].includes(campo)) {
         // ⚡ Usamos la fecha en formato texto dd/mm/yyyy
         datos[campo] = elemento.getAttribute("data-texto");
       } else {
