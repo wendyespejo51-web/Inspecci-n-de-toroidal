@@ -30,15 +30,14 @@ document.getElementById("enviarBtn").addEventListener("click", async function(e)
     "Hallazgos", "Observacion"
   ];
 
-  // Capturar datos de cada campo de número
+  // Capturar datos de cada campo
   campos.forEach(campo => {
-    const elemento = document.getElementById(campo);
+  const elemento = document.getElementById(campo);
     if (elemento) {
-      if (["codigo","NodoFinal"].includes(campo)) {
-        datos[campo] = elemento.value.trim(); // siempre como string
-        }  else if (["fecha"].includes(campo)) {
-        // ⚡ Usamos la fecha en formato texto dd/mm/yyyy
-        datos[campo] = elemento.getAttribute("data-texto");
+      if (campo === "fecha") {
+        datos[campo] = elemento.getAttribute("data-texto"); // formato dd/MM/yyyy
+      } else if (["codigo","NodoFinal"].includes(campo)) {
+        datos[campo] = elemento.value.trim(); // como texto
       } else {
         datos[campo] = elemento.value;
       }
