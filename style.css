@@ -108,3 +108,74 @@ small {
     padding: 12px;
   }
 }
+
+/* === Estilos para sugerencias de SED === */
+.suggestions-list {
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background: white;
+  width: calc(100% - 22px);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.suggestions-list li {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.suggestions-list li:hover,
+.suggestions-list li:focus {
+  background-color: #e7f3ff;
+  color: #0056b3;
+}
+
+.suggestions-list li:last-child {
+  border-bottom: none;
+}
+
+
+/* === Estilos para sugerencias de Nodo final === */
+.suggestions2-list {
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background: white;
+  width: calc(100% - 22px);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.suggestions2-list li {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.suggestions2-list li:hover,
+.suggestions2-list li:focus {
+  background-color: #e7f3ff;
+  color: #0056b3;
+}
+
+.suggestions2-list li:last-child {
+  border-bottom: none;
+}
