@@ -4640,7 +4640,7 @@ const listaNodoFinal = [
 
 // ===== 2. FUNCIÓN DE AUTOCOMPLETADO REUTILIZABLE =====
 function setupAutocomplete(inputElement, dataList, suggestionsElement) {
-  inputElement.addEventListener("input", function () {
+  inputElement.addEventListener("input", () => {
     const value = inputElement.value.trim().toUpperCase();
     suggestionsElement.innerHTML = "";
     suggestionsElement.style.display = "none";
@@ -4666,14 +4666,14 @@ function setupAutocomplete(inputElement, dataList, suggestionsElement) {
   });
 
   // Cierra la lista si se hace clic fuera del campo de entrada o de la lista de sugerencias
-  document.addEventListener("click", function (e) => {
+  document.addEventListener("click", (e) => {
     if (e.target !== inputElement && !suggestionsElement.contains(e.target)) {
       suggestionsElement.style.display = "none";
     }
   });
 
   // Cierra la lista con la tecla ESC
-  inputElement.addEventListener("keydown", function (e) => {
+  inputElement.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       suggestionsElement.style.display = "none";
     }
