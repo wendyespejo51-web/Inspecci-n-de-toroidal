@@ -4696,7 +4696,7 @@ inputNodoFinal.addEventListener("input", function () {
   if (valores.length === 0) return;
 
   // Filtrar Nodo Final que empiezan con lo que escribió
-  const filtrados2 = listaNodoFinal.filter(Nodofinal => Nodofinal.includes(valor));
+  const filtrados2 = listaNodoFinal.filter(Nodofinal => Nodofinal.includes(valores));
 
   if (filtrados2.length > 0) {
     suggestions2List.style.display = "block";
