@@ -4685,13 +4685,13 @@ const listaNodoFinal = [
 
 // ===== 2. AUTOCOMPLETADO DEL CAMPO NODO FINAL =====
 const inputNodoFinal = document.getElementById("NodoFinal");
-const suggestionsList2 = document.getElementById("suggestions2");
+const suggestions2List = document.getElementById("suggestions2");
 
 // Mostrar sugerencias mientras escribe en listado 2
 inputNodoFinal.addEventListener("input", function () {
   const valores = inputNodoFinal.value.trim().toUpperCase(); // Mayúsculas, sin espacios
-  suggestionsList2.innerHTML = "";
-  suggestionsList2.style.display = "none";
+  suggestions2List.innerHTML = "";
+  suggestions2List.style.display = "none";
 
   if (valores.length === 0) return;
 
@@ -4699,31 +4699,31 @@ inputNodoFinal.addEventListener("input", function () {
   const filtrados2 = listaNodoFinal.filter(Nodofinal => Nodofinal.includes(valor));
 
   if (filtrados2.length > 0) {
-    suggestionsList2.style.display = "block";
+    suggestions2List.style.display = "block";
     filtrados2.forEach(Nodofinal => {
-      const nodo = document.createElement("nodo");
-      nodo.textContent = Nodofinal;
-      nodo.addEventListener("click", () => {
+      const li = document.createElement("li");
+      li.textContent = Nodofinal;
+      li.addEventListener("click", () => {
         inputNodoFinal.value = Nodofinal;
-        suggestionsList2.style.display = "none";
+        suggestions2List.style.display = "none";
         inputNodoFinal.focus();
       });
-      suggestionsList2.appendChild(nodo);
+      suggestions2List.appendChild(li);
     });
   }
 });
 
 // Cerrar sugerencias si se hace clic fuera de listado 2
 document.addEventListener("click", function (e) {
-  if (e.target !== inputNodoFinal && !suggestionsList2.contains(e.target)) {
-    suggestionsList2.style.display = "none";
+  if (e.target !== inputNodoFinal && !suggestions2List.contains(e.target)) {
+    suggestions2List.style.display = "none";
   }
 });
 
 // Cerrar con tecla ESC en listado 2
 inputNodoFinal.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
-    suggestionsList2.style.display = "none";
+    suggestions2List.style.display = "none";
   }
 });
 
